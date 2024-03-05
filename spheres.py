@@ -35,8 +35,8 @@ class HotSpheres:
         h=10.0,
         r=0.1,
         D=1.0,
-        dx=0.1,
-        dy=0.1,
+        dx=0.05,
+        dy=0.05,
         Tcold=300.0,
         Thot=700.0,
     ):
@@ -102,7 +102,7 @@ class HotSpheres:
         self.im.set_array(self.u[1:-1, 1:-1])
         return (self.im,)
 
-    def display(self, nsteps=100):
+    def display(self, nsteps=1000):
         # Create a figure
         self.fig, self.ax = plt.subplots(figsize=(3, 3))
 
@@ -125,3 +125,4 @@ class HotSpheres:
             repeat=False,
         )
         plt.tight_layout()
+    
